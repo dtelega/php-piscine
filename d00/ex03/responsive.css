@@ -1,0 +1,52 @@
+body {
+       	background-color: #c7b39b;
+       	background-image: url(http://www.narand.com/images/qss/background/big/8.jpg);
+   	}
+	.first_line {
+		font-weight: bold;
+		font-size: 2vh;
+	}
+	.cell {
+		width: 3%;
+		height: 3%;
+	}
+	.pink {
+		text-align: left;
+		background: #C71585;
+	}
+	.blue {
+		text-align: left;
+		background: #1E90FF
+	}
+	.yellow {
+		text-align: left;
+		background: #FFD700;
+	}
+	.lantan {
+		text-align: left;
+		background: #32CD32;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.actino {
+		text-align: left;
+		background: #008000;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.sym {
+		font-weight: bold;
+		font-size: 2vh;
+		text-align: center;
+	}
+	.num {
+		text-align: top right;
+		font-size: 1vh;
+		font-weight: bold;
+		padding-left: 1%;
+	}
+	.mass {
+		padding-right: 1%;
+		text-align: right;
+		font-size: 1vh;
+	}

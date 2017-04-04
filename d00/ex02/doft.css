@@ -1,0 +1,84 @@
+body {
+	background-color: #505050;
+	background-image: file:///nfs/2016/d/dtelega/php-piscine/d00/ex02/resources/doft.jpg;
+}
+
+.shadow {
+	background: #000000;
+    box-shadow: 5px 4px 3px 3px rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+.head {
+	width: 80%;
+	height: 60px;
+	min-height: 0px;
+	background-color: #909090;
+	margin-left: 8%;
+	border-radius: 10px;
+}
+
+.img {
+	height: 90%;
+	width: 35%;
+	max-width: 400px;
+}
+
+.first_coll {
+	background-color: #909090;
+	margin-left: 9.5%;
+	height: auto;
+	width: 7%;
+	float:left;
+	border-radius: 10px;
+}
+
+.sec_coll {
+	background-color: #909090;
+	margin-left: 2%;
+	float: left;
+	width: 56%;
+	border-radius: 10px;
+}
+
+.thr_coll {
+	background-color: #909090;
+	margin-left: 2%;
+	width: 7%;
+	float: left;
+	border-radius: 10px;
+	padding-bottom: 10%;
+}
+
+.foot {
+	width: 27%;
+	background-color: #88ff89;
+	margin-left: 7%;
+	border-radius: 10px;
+	position: absolute;
+	margin-top: -5%;
+}
+
+.red {
+	width: 60%;
+	margin-left: 20%;
+	border-color: #fc0100;
+	border: 3px solid #fc0100;
+	border-radius: 5px;
+}
+
+.brick {
+	background-image: url(resources/brick.jpg);
+	background-repeat: 5;
+}
+
+.reload_close {
+	width: 20px;
+}
+
+.ikea {
+	width: 200px;
+	height: 200px;
+	margin-left: 30%;
+	margin-top: 50%;
+}
