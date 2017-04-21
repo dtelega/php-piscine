@@ -1,0 +1,82 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- index.html                                         :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: dtelega <marvin@42.fr>                     +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2017/04/14 18:39:00 by dtelega           #+#    #+#            -->
+<!-- Updated: 2017/04/14 18:39:00 by dtelega          ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To do or not to do</title>
+</head>
+<script src="todo.js"></script>
+<style type="text/css">
+	body {
+		background-color: #6B8E23;
+	}
+
+	.pole {
+		background-color: #9ACD32;
+		margin-left: 20%;
+		margin-top: 20px;
+		width: 600px;
+		min-height: 110px;
+		border: 2px solid #556B2F;
+		border-radius: 5px;
+	}
+	.new {
+		background-color: #2E8B57;;
+		font-size: x-large;
+		border-radius: 10px;
+		outline: 0;
+		outline-offset: 0;
+		margin-left: 270px;
+		margin-top: 30px;
+		margin-bottom: 10px;
+		color: #D3D3D3;
+		font-style: italic;
+	}
+	.text {
+		color: black;
+		font-size: x-large;
+		margin-left: 40px;
+	}
+	.todo {
+		background-color: #2E8B57;
+		margin-top: 20px;
+		margin-left: 40px;
+		margin-right: 40px;
+		text-align: center;
+		border-radius: 5px;
+		font-size: large;
+		padding: 10px;
+	}
+	.text-field {
+		margin-left: 310px;
+		margin-top: 100px;
+	}
+	.text-todo {
+		width: 300px;
+		height: 150px;
+		font-size: large;
+		outline: 0;
+		outline-offset: 0;
+		padding: 20px;
+	}
+</style>
+<body>
+<div class="pole">
+	<div style="margin-top: 10px;"><span class="text">TO DO:</span></div>
+	<div id="ft_list"></div>
+	<div>
+		<input type="button" name="new" id="new_butt" value="New" class="new">
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- balloon.html                                       :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: dtelega <marvin@42.fr>                     +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2017/04/14 14:31:36 by dtelega           #+#    #+#            -->
+<!-- Updated: 2017/04/14 14:31:37 by dtelega          ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ballon</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<style>
+		.balloon {
+			height: 200px;
+			width: 200px;
+			background-color: red;
+			border-radius: 50%;
+			margin-top: 30%;
+			margin-left:40%;
+		}
+	</style>
+</head>
+<body>
+<div id='balloon' class='balloon'></div>
+<script type="text/javascript">
+	$size = 200;
+	$click = 0;
+
+	function mouse_click() {
+		$size += 10;
+		$click ++;
+		if ($click > 2)
+			$click = 0;
+		if ($size > 420)
+			$size = 200;
+		paint();
+	}
+
+	function mouse_out() {
+		$size -= 5;
+		$click--;
+		if ($click < 0)
+			$click = 2;
+		if ($size < 200)
+			$size = 200;
+		paint();
+	}
+
+	function paint() {
+		$(".balloon").css("height", $size + 'px');
+		$(".balloon").css("width", $size + 'px');
+		if ($click == 0)
+			$('.balloon').css("background-color", "red");
+		if ($click == 1)
+			$('.balloon').css("background-color", "green");
+		if ($click == 2)
+			$('.balloon').css("background-color", "blue");
+	}
+
+	$(document).ready(function() {
+		$(".balloon").bind("click", mouse_click);
+		$(".balloon").bind("mouseout", mouse_out);
+	});
+
+	
+</script>
+</body>
+</html>

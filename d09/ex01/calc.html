@@ -1,0 +1,148 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- calc.html                                          :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: dtelega <marvin@42.fr>                     +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2017/04/14 16:31:45 by dtelega           #+#    #+#            -->
+<!-- Updated: 2017/04/14 16:31:46 by dtelega          ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calc</title>
+</head>
+<style>
+	body {
+		background-color: #FFF5EE;
+	}
+
+	.shadow {
+		box-shadow: 5px 4px 3px 3px rgba(0,0,0,0.5);
+		padding: 10px;
+	}
+
+	.field {
+		background-color: #D3D3D3;
+		width: 400px;
+		height: 140px;
+		margin-top: 100px;
+		margin-left: 30%;
+		border-radius: 20px;
+	}
+
+	.leftnb {
+		float: left;	
+		border-radius: 5px;
+		width: 100px;
+		height: 30px;
+		font-size: large;
+		outline: 0;
+		outline-offset: 0;
+	}
+
+	.rightnb {
+		float:right;
+		border-radius: 5px;
+		width: 100px;
+		height: 30px;
+		font-size: large;
+		outline: 0;
+		outline-offset: 0;
+	}
+
+	.do {
+		margin-top: 20px;
+		width: 50px;
+		height: 30px;
+		font-size: large;
+		outline: 0;
+		outline-offset: 0;
+	}
+
+	.res {
+		width: 320px;
+		background-color: #32CD32;
+		border-radius: 30px;
+		outline: 0;
+		outline-offset: 0;
+		font-size: large;
+		font-style: italic;
+	}
+</style>
+<script type="text/javascript">
+	var nb1;
+	var nb2;
+	var znk;
+
+setInterval('Please, use me ...', 30000);
+	function get_res() {
+		nb1 = document.getElementById("nb1");
+		nb2 = document.getElementById("nb2");
+		znk = document.getElementById("znk").value;
+		nb1 = Number(nb1.value);
+		nb2 = Number(nb2.value);
+
+		if (nb1 < 0 || nb2 < 0) {
+			alert("Error :(");
+		}
+		else {
+			var res;
+			if (znk === "+")
+				res = nb1 + nb2;
+			if (znk === "-")
+				res = nb1 - nb2;
+			if (znk === "*")
+				res = nb1 * nb2;
+			if (znk === "/") {
+				if (nb2 === 0) {
+					console.log("It's over 9000!");
+					alert("It's over 9000!");
+					return ;
+				}
+				else
+					res = nb1 / nb2;
+			}
+			if (znk === "%") {
+				if (nb2 === 0) {
+					console.log("It's over 9000!");
+					alert("It's over 9000!");
+					return ;
+				}
+				else
+					res = nb1 % nb2;
+			}
+			console.log(res);
+			alert(res);
+		}
+	}
+</script>
+<body>
+<div class="field shadow">
+	<span style="margin-left: 70px; font-size: x-large; font-weight: bold">^^^^</span>
+	<span style="margin-left: 130px; font-size: x-large; font-weight: bold">^^^^</span>
+	<br>
+	<div style="float: left; margin-left: 50px;">
+		<input id="nb1" class="leftnb shadow" type="number" name="1nb" value="0">
+	</div>
+	<div style="float: left; margin-left: 10px;">
+		<select id="znk" class="do shadow">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+			<option>%</option>
+		</select></div>
+	<div style="float: left; margin-left: 10px;">
+		<input id="nb2" class="rightnb shadow" type="number" name="2nb" value="0">
+	</div>
+	<div style=" width:100%; height:1px; clear:both;"></div>
+	<div style="margin-left: 50px; margin-top: 10px">
+		<input type="button" name="res" value="Try me!" class="res shadow" onclick="get_res();">
+	</div>
+</div>
+</body>
+</html>
