@@ -1,34 +1,39 @@
 #!/usr/bin/php
 <?PHP
 
-$tab = $argv;
-$i = 1;
-$new = array();
-while ($i < $argc) {
-	$subtab = explode(" ", $tab[$i]);
-	$new = array_merge($new, $subtab);
-	$i++;
-}
-natcasesort($new);
-foreach ($new as $key => $var){
-	if (ctype_alpha($var)){
-		echo ($var);
-		echo "\n";
-		unset($new[$key]);
+	function sorted($elem1, $elem2) {
+		$elem1 = strtolower($elem1);
+		$elem2 = strtolower($elem2);
+		$tab = array();
+		$tab[0] = $elem1;
+		$tab[1] = $elem2;
+		$sort = $tab;
+		sort($tab);
 	}
-}
-sort($new, SORT_STRING);
-foreach ($new as $key => $var){
-	if (ctype_digit($var)){
-		echo ($var);
-		echo "\n";
-		unset($new[$key]);
-	}
-}
-foreach ($new as $ket => $var) {
-	echo($var);
-	echo "\n";
-	unset ($new[$key]);
-}
 
-?>
+	unset($argv[0]);
+	$array = array();
+	foreach ($argv as $elem) {
+		$subtab = array_filter(explode(" ", $elem));
+		foreach ($subtab as $elem) {
+			$array[] = $elem;
+		}
+	}
+	$i = 0;
+	foreach ($array as $elem) {
+		echo $elem."\n";
+	}
+	/*while ($i < count($array) - 1) {
+		if (sorted($array[$i], $array[$i + 1])){
+			$i++;
+		}
+		else {
+			$temp = $array[$i];
+			$array[$i] = $array[$i + 1];
+			$array[$i + 1] = $temp;
+			$i = 0;
+		}
+	}
+	foreach ($array as $v)
+		echo $v."\n";
+*/

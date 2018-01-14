@@ -4,10 +4,10 @@
 while (1)
 {
 	echo "Enter a number: ";
-	if (!($num = trim(fgets(STDIN))) && strcmp($num, "0"))
-		break ;
-	if (is_numeric($num))
-	{
+	if (!($stdin = fgets(STDIN)))
+		break;
+	$num = trim($stdin);
+	if (is_numeric($num)) {
 		echo "The number ";
 		echo ($num);
 		echo " is ";
@@ -16,13 +16,10 @@ while (1)
 		else
 			echo "odd\n";
 	}
-	else
-	{
+	else {
 		echo "'";
 		echo ($num);
 		echo "' is not a number\n";
 	}
 }
 echo "\n";
-
-?>

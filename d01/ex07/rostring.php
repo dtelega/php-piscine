@@ -1,28 +1,12 @@
 #!/usr/bin/php
 <?PHP
-
-if (!$argv[1])
-	return ;
-$tab = explode(" ", $argv[1]);
-$count = count($tab);
-$i = 1;
-$c = 0;
-$arr = array();
-while ($i < $count){
-	if ($tab[$i]){
-		echo ($tab[$i]);
-		echo (" ");
+	
+	if ($argc == 1)
+		return ;
+	$tab = array_filter(explode(' ', $argv[1]));
+	$first = $tab[0];
+	unset($tab[0]);
+	foreach ($tab as $k) {
+		echo $k." ";
 	}
-	$i++;
-}
-echo ($tab[0]);
-$count = count($arr);
-$i = 0;
-while ($i < $count){
-	if ($i != 0)
-		echo " ";
-	echo ($arr[$i]);
-}
-echo "\n";
-
-?>
+	echo $first."\n";
