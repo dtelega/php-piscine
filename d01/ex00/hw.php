@@ -1,6 +1,4 @@
 #!/usr/bin/php
-<?PHP
+<?php
 
 echo "Hello World\n";
-
-?>

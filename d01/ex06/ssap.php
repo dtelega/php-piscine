@@ -1,5 +1,5 @@
 #!/usr/bin/php
-<?PHP
+<?php
 	unset($argv[0]);
 	$array = array();
 	foreach ($argv as $elem) {

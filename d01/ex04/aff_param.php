@@ -1,5 +1,5 @@
 #!/usr/bin/php
-<?PHP
+<?php
 
 $i = 1;
 while ($i < $argc)

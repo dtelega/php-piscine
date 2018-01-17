@@ -1,4 +1,4 @@
-<?PHP
+<?php
 
 function ft_is_sort($tab) {
 	$sort_tab = $tab;
